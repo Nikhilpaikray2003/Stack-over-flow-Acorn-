@@ -1,22 +1,174 @@
-import React from 'react';
 
-const BlogSidebar = () => (
-  <aside className="hidden lg:block w-72 bg-white p-4 shadow-md">
-    <div className="font-semibold text-gray-700 mb-4">The Overflow Blog</div>
-    <ul className="space-y-3">
-      <li className="text-gray-600">The unexpected benefits of mentoring others</li>
-      <li className="text-gray-600">Podcast 354: Building for AR with Niantic Labs' augmented reality SDK</li>
-    </ul>
-    <div className="font-semibold text-gray-700 mt-6 mb-4">Featured & Meta</div>
-    <ul className="space-y-3">
-      <li className="text-gray-600">Beta release of Collectives™ on Stack Overflow</li>
-    </ul>
-    <div className="font-semibold text-gray-700 mt-6 mb-4">Hot Meta Posts</div>
-    <ul className="space-y-3">
-      <li className="text-gray-600">Tags appear to be redundant</li>
-      <li className="text-gray-600">Handling duplicate questions</li>
-    </ul>
-  </aside>
-);
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import { PencilIcon, StarIcon, ListBulletIcon } from '@heroicons/react/24/outline';
+
+const BlogSidebar = () => {
+  return (
+    <aside className="w-72 bg-white p-4 ml-auto mt-16">
+      
+      {/* The Overflow Blog Section */}
+      <div>
+        <h2 className="text-gray-800 font-semibold mb-4">The Overflow Blog</h2>
+        <ul className="space-y-3">
+          <li className="flex items-center space-x-2 text-gray-500 hover:text-gray-800 cursor-pointer">
+            <PencilIcon className="h-5 w-5 text-gray-500" />
+            <span className="hover:text-gray-800">The unexpected benefits of mentoring others</span>
+          </li>
+          <li className="flex items-center space-x-2 text-gray-500 hover:text-gray-800 cursor-pointer">
+            <PencilIcon className="h-5 w-5 text-gray-500" />
+            <span className="hover:text-gray-800">Podcast 354: Building for AR with Niantic Labs' SDK</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Featured & Meta Section */}
+      <div className="mt-8">
+        <h2 className="text-gray-800 font-semibold mb-4">Featured & Meta</h2>
+        <ul className="space-y-3">
+          <li className="flex items-center space-x-2 text-gray-500 hover:text-gray-800 cursor-pointer">
+            <StarIcon className="h-5 w-5 text-yellow-500" />
+            <span className="hover:text-gray-800">Beta release of Collectives™ on Stack Overflow</span>
+          </li>
+          <li className="flex items-center space-x-2 text-gray-500 hover:text-gray-800 cursor-pointer">
+            <StarIcon className="h-5 w-5 text-yellow-500" />
+            <span className="hover:text-gray-800">Improving inclusivity with the new post reactions</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Hot Meta Posts Section */}
+      <div className="mt-8">
+        <h2 className="text-gray-800 font-semibold mb-4">Hot Meta Posts</h2>
+        <ul className="space-y-3">
+          <li className="flex items-center space-x-2 text-gray-500 hover:text-gray-800 cursor-pointer">
+            <ListBulletIcon className="h-5 w-5 text-red-500" />
+            <span className="hover:text-gray-800">How can we handle duplicate questions more effectively?</span>
+          </li>
+          <li className="flex items-center space-x-2 text-gray-500 hover:text-gray-800 cursor-pointer">
+            <ListBulletIcon className="h-5 w-5 text-red-500" />
+            <span className="hover:text-gray-800">Tags that appear redundant in some contexts</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Custom Filter Section */}
+      <div className="mt-8">
+        <h2 className="text-gray-800 font-semibold mb-4">Custom Filter</h2>
+        <div className="flex flex-col space-y-2">
+          <input
+            type="text"
+            placeholder="Add filter"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button className="bg-blue-500 text-white rounded-lg py-2 px-3 hover:bg-blue-600">
+            Add Custom Filters
+          </button>
+        </div>
+      </div>
+    </aside>
+  );
+};
 
 export default BlogSidebar;
+
+
+
+
+
+
+
+
+
+//After Responsiveness
+
+
+
+
+
+
+
+// import React from 'react';
+// import { PencilIcon, StarIcon, ListBulletIcon } from '@heroicons/react/24/outline';
+
+// const BlogSidebar = () => {
+//   return (
+//     <aside className="w-72 bg-white p-4 ml-auto mt-16 border border-gray-200 rounded-lg shadow-lg">
+      
+//       {/* The Overflow Blog Section */}
+//       <div>
+//         <h2 className="text-gray-800 font-semibold mb-4">The Overflow Blog</h2>
+//         <ul className="space-y-3">
+//           <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+//             <PencilIcon className="h-5 w-5 text-gray-500" />
+//             <span>The unexpected benefits of mentoring others</span>
+//           </li>
+//           <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+//             <PencilIcon className="h-5 w-5 text-gray-500" />
+//             <span>Podcast 354: Building for AR with Niantic Labs' SDK</span>
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Featured & Meta Section */}
+//       <div className="mt-8">
+//         <h2 className="text-gray-800 font-semibold mb-4">Featured & Meta</h2>
+//         <ul className="space-y-3">
+//           <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+//             <StarIcon className="h-5 w-5 text-yellow-500" />
+//             <span>Beta release of Collectives™ on Stack Overflow</span>
+//           </li>
+//           <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+//             <StarIcon className="h-5 w-5 text-yellow-500" />
+//             <span>Improving inclusivity with the new post reactions</span>
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Hot Meta Posts Section */}
+//       <div className="mt-8">
+//         <h2 className="text-gray-800 font-semibold mb-4">Hot Meta Posts</h2>
+//         <ul className="space-y-3">
+//           <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+//             <ListBulletIcon className="h-5 w-5 text-red-500" />
+//             <span>How can we handle duplicate questions more effectively?</span>
+//           </li>
+//           <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+//             <ListBulletIcon className="h-5 w-5 text-red-500" />
+//             <span>Tags that appear redundant in some contexts</span>
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Custom Filter Section */}
+//       <div className="mt-8">
+//         <h2 className="text-gray-800 font-semibold mb-4">Custom Filter</h2>
+//         <div className="flex flex-col space-y-2">
+//           <input
+//             type="text"
+//             placeholder="Add filter"
+//             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+//           />
+//           <button className="bg-blue-500 text-white rounded-lg py-2 px-3 hover:bg-blue-600">
+//             Add Custom Filters
+//           </button>
+//         </div>
+//       </div>
+//     </aside>
+//   );
+// };
+
+// export default BlogSidebar;
+

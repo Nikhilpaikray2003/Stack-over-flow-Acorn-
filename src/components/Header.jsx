@@ -1,15 +1,22 @@
+
+
+
+
 import React from 'react';
 import logo from '../components/logo-stackoverflow.png';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon, ChatBubbleBottomCenterTextIcon, UserIcon, Cog6ToothIcon, TrophyIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+    <header className="bg-white px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 fixed top-0 left-0 right-0 z-10">
+      {/* Logo Section */}
       <div className="flex items-center space-x-2">
         <img src={logo} alt="StackOverflow Logo" className="h-8 w-auto" />
         <span className="sr-only">StackOverflow</span>
       </div>
-      <div className="relative w-full sm:w-1/2">
+
+      {/* Search Bar and Products Button */}
+      <div className="relative w-full sm:w-1/2 flex items-center">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <MagnifyingGlassIcon className="h-5 w-5 text-orange-500" />
         </div>
@@ -18,12 +25,85 @@ const Header = () => {
           placeholder="Search Your Answers Here..."
           className="border rounded-lg pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
+        <button className="ml-4 bg-white-400 text-black px-4 py-2 rounded-lg hover:bg-gray-400">
+          Products
+        </button>
       </div>
+
+      {/* Icon Section */}
       <div className="flex items-center space-x-4">
-        <button className="text-gray-600">Top Questions</button>
+        <TrophyIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+        <ChatBubbleBottomCenterTextIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+        <UserIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+        <Cog6ToothIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
       </div>
     </header>
   );
 };
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+//After Responsiveness
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react';
+// import logo from '../components/logo-stackoverflow.png';
+// import { MagnifyingGlassIcon, ChatBubbleBottomCenterTextIcon, UserIcon, Cog6ToothIcon, TrophyIcon } from '@heroicons/react/24/outline';
+
+// const Header = () => {
+//   return (
+//     <header className="bg-white px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 fixed top-0 left-0 right-0 z-10 shadow-md">
+//       {/* Logo Section */}
+//       <div className="flex items-center space-x-2">
+//         <img src={logo} alt="StackOverflow Logo" className="h-8 w-auto" />
+//         <span className="sr-only">StackOverflow</span>
+//       </div>
+
+//       {/* Search Bar and Products Button */}
+//       <div className="relative w-full sm:w-1/2 flex items-center">
+//         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+//           <MagnifyingGlassIcon className="h-5 w-5 text-orange-500" />
+//         </div>
+//         <input
+//           type="text"
+//           placeholder="Search Your Answers Here..."
+//           className="border rounded-lg pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-500"
+//         />
+//         <button className="ml-4 bg-white-600 text-black px-4 py-2 rounded-lg hover:bg-gray-400">
+//           Products
+//         </button>
+//       </div>
+
+//       {/* Icon Section */}
+//       <div className="flex items-center space-x-4">
+//         <TrophyIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+//         <ChatBubbleBottomCenterTextIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+//         <UserIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+//         <Cog6ToothIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+//       </div>
+//     </header>
+//   );
+// };
+
+// export default Header;
+
+
