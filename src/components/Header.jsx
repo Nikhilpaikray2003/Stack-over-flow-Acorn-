@@ -11,7 +11,7 @@ const Header = () => {
     <header className="bg-white px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 fixed top-0 left-0 right-0 z-10">
       {/* Logo Section */}
       <div className="flex items-center space-x-2">
-        <img src={logo} alt="StackOverflow Logo" className="h-8 w-auto" />
+        <img src={logo} alt="StackOverflow Logo" className="h-7 w-auto" />
         <span className="sr-only">StackOverflow</span>
       </div>
 
@@ -32,10 +32,11 @@ const Header = () => {
 
       {/* Icon Section */}
       <div className="flex items-center space-x-4">
-        <TrophyIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
         <ChatBubbleBottomCenterTextIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+        <TrophyIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+        <Cog6ToothIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" /> 
         <UserIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
-        <Cog6ToothIcon className="h-6 w-6 text-gray-600 hover:text-orange-500 cursor-pointer" />
+        
       </div>
     </header>
   );
@@ -105,5 +106,14 @@ export default Header;
 // };
 
 // export default Header;
+
+
+
+
+
+
+
+
+
 
 
