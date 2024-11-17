@@ -160,7 +160,7 @@ import FilterBar from './components/Filterbar';
 import BlogSidebar from './components/BlogSidebar';
 
 function App() {
-  const [filter, setFilter] = useState('activity'); // Default filter to 'activity'
+  const [filter, setFilter] = useState('activity'); 
 
   return (
     <div className="bg-white min-h-screen font-sans">
