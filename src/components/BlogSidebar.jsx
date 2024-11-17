@@ -205,11 +205,11 @@ const BlogSidebar = () => {
       <div className="bg-gray-50 p-4 rounded-t-lg shadow-sm"> {/* Rounded top only */}
         <h2 className="text-gray-800 font-semibold mb-4">The Overflow Blog</h2>
         <ul className="space-y-3">
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 cursor-pointer">
             <PencilIcon className="h-5 w-5 text-gray-500" />
             <span>The unexpected benefits of mentoring others</span>
           </li>
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 cursor-pointer">
             <PencilIcon className="h-5 w-5 text-gray-500" />
             <span>Podcast 354: Building for AR with Niantic Labs' SDK</span>
           </li>
@@ -217,11 +217,11 @@ const BlogSidebar = () => {
 
         <h2 className="text-gray-800 font-semibold mt-4 mb-4">Featured & Meta</h2>
         <ul className="space-y-3">
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 cursor-pointer">
             <StarIcon className="h-5 w-5 text-yellow-500" />
             <span>Beta release of Collectives™ on Stack Overflow</span>
           </li>
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 cursor-pointer">
             <StarIcon className="h-5 w-5 text-yellow-500" />
             <span>Improving inclusivity with the new post reactions</span>
           </li>
@@ -232,11 +232,11 @@ const BlogSidebar = () => {
       <div className="bg-gray-100 p-4 shadow-sm">
         <h2 className="text-gray-800 font-semibold mb-4">Hot Meta Posts</h2>
         <ul className="space-y-3">
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 cursor-pointer">
             <ListBulletIcon className="h-5 w-5 text-red-500" />
             <span>How can we handle duplicate questions more effectively?</span>
           </li>
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 cursor-pointer">
+          <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 cursor-pointer">
             <ListBulletIcon className="h-5 w-5 text-red-500" />
             <span>Tags that appear redundant in some contexts</span>
           </li>
