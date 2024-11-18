@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import QuestionItem from './QuestionItem';
 
@@ -6,7 +6,8 @@ const QuestionList = ({ filter, searchQuery }) => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const fetchQuestions = async () => {
+
+  const fetchQuestions = useCallback(async () => {
     setLoading(true);
     setError(null);
 
@@ -28,16 +29,15 @@ const QuestionList = ({ filter, searchQuery }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [filter, searchQuery]); // Add filter and searchQuery as dependencies
 
   useEffect(() => {
     fetchQuestions();
-  }, [filter, searchQuery]);
+  }, [fetchQuestions]);
 
-  
   const timeAgo = (creationDate) => {
     const secondsAgo = Math.floor((Date.now() - creationDate * 1000) / 1000);
-    
+
     if (secondsAgo < 60) return `${secondsAgo} seconds ago`;
     const minutesAgo = Math.floor(secondsAgo / 60);
     if (minutesAgo < 60) return `${minutesAgo} minutes ago`;
@@ -62,7 +62,7 @@ const QuestionList = ({ filter, searchQuery }) => {
             votes: question.score,
             answers: question.answer_count,
             views: question.view_count,
-            timestamp: timeAgo(question.creation_date), // Using timeAgo function here
+            timestamp: timeAgo(question.creation_date),
             user: question.owner.display_name,
             user_id: question.owner.user_id,
           }}
@@ -73,22 +73,3 @@ const QuestionList = ({ filter, searchQuery }) => {
 };
 
 export default QuestionList;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
