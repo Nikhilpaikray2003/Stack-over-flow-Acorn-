@@ -19,7 +19,7 @@ const BlogSidebar = () => {
           </li>
         </ul>
 
-        <h2 className="text-gray-800 font-semibold mt-4 mb-4">Featured and Meta</h2>
+        <h2 className="text-gray-800 font-semibold mt-4 mb-4">Featured & Meta</h2>
         <ul className="space-y-3">
           <li className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 cursor-pointer">
             <StarIcon className="h-5 w-5 text-yellow-500" />
